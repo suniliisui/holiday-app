@@ -5,6 +5,5 @@
 
 export const environment = {
   production: false,
-  baseUrl: "https://holidayapi.com/v1/",
-  apiKey : "fe40f388-684d-4da4-9696-83b4e02ab09e"
+  baseUrl: "https://holidayapi.com/v1/holidays?key=fe40f388-684d-4da4-9696-83b4e02ab09e&country=US&public=true&"  
 };

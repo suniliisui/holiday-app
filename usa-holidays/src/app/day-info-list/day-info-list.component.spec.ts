@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HolidaysListComponent } from './holidays-list.component';
+import { DayInfoListComponent } from './day-info-list.component';
 
-describe('HolidaysListComponent', () => {
-  let component: HolidaysListComponent;
-  let fixture: ComponentFixture<HolidaysListComponent>;
+describe('DayInfoListComponent', () => {
+  let component: DayInfoListComponent;
+  let fixture: ComponentFixture<DayInfoListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HolidaysListComponent ]
+      declarations: [ DayInfoListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HolidaysListComponent);
+    fixture = TestBed.createComponent(DayInfoListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

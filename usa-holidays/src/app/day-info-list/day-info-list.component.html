@@ -1,0 +1,7 @@
+<a [routerLink]="['/usaHolidaysList']" title="usaHolidaysList">Back To Holidays List</a>
+<md-list>
+    <md-list-item *ngFor="let dayObj of dayInfoList | keys">
+        <span>{{ dayObj.value.date}}</span>
+        <span>{{ dayObj.value.name}}</span>
+    </md-list-item>
+</md-list>

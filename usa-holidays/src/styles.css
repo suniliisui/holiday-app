@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+a {
+    color: #337ab7 !important;
+    text-decoration: underline !important;
+}
+a {
+    background-color: transparent;
+}
+a:hover, a:focus {
+    color: #2A6496;
+    text-decoration: underline;
+}
+span{
+	margin-right: 20px;
+    color: #17bba4;
+}

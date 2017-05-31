@@ -18,15 +18,5 @@ export class InterceptedHttp extends Http {
     private updateUrl(req: string) {
         return  environment.baseUrl + req;
     }
-
-    private getRequestOptionArgs(options?: RequestOptionsArgs) : RequestOptionsArgs {      
-        if (options == null) {
-            options = new RequestOptions();
-        }
-        if (options.headers == null) {
-            options.headers = new Headers();
-        }
-
-        return options;
-    }
+    
 }

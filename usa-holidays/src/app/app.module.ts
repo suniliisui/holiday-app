@@ -6,10 +6,12 @@ import { httpFactory } from "./http.factory";
 import { Routes, RouterModule } from '@angular/router';
 import {MdListModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule, MdNativeDateModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HolidaysListComponent } from './holidays-list/holidays-list.component';
-
+import { KeysPipe } from './pipes/keys';
+import { DayInfoListComponent } from './day-info-list/day-info-list.component';
 
 
 
@@ -17,6 +19,7 @@ import { HolidaysListComponent } from './holidays-list/holidays-list.component';
 
 const appRoutes: Routes = [
   { path: 'usaHolidaysList', component: HolidaysListComponent },
+  { path: 'dayInfo/:dateInfo', component: DayInfoListComponent },
   {
     path: '**',
     redirectTo: 'usaHolidaysList'    
@@ -26,12 +29,15 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HolidaysListComponent
+    HolidaysListComponent,
+    KeysPipe,
+    DayInfoListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaterialModule, MdNativeDateModule,
     RouterModule.forRoot(appRoutes),
     MdListModule,
     BrowserAnimationsModule

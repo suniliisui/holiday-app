@@ -1,5 +1,10 @@
 <md-nav-list>
-   <md-list-item *ngFor="let link of holidaysList">
-     <a *ngFor="let obj of link">{{ obj.name }}</a>
+   <md-list-item *ngFor="let monthObj of holidaysList | keys">
+   <md-icon md-list-icon><i class="material-icons">perm_contact_calendar</i></md-icon>
+    <h3 md-line> {{monthObj.key}} </h3>
+    <p md-line *ngFor="let dateObj of monthObj.value | keys">
+      <a [routerLink]="['/dayInfo', dateObj.value.date]"title="{{dateObj.value.name}}"> {{ dateObj.value.name }}</a>   
+    </p>
+    <md-divider></md-divider>          
    </md-list-item>
 </md-nav-list>
